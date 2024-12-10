@@ -12,12 +12,12 @@ h1 {
 }
 
 .logo-container {
-    text-align: center; /* Center the logo */
+    text-align: center;
     margin-top: 20px;
 }
 
 .logo {
-    max-width: 300px; /* Adjust size to fit your layout */
+    max-width: 300px;
     height: auto;
 }
 
@@ -25,7 +25,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40px; /* Add some space between the logo and movie catalog */
+    margin-top: 40px;
 }
 
 .movie {
@@ -35,7 +35,7 @@ h1 {
     margin: 10px;
     padding: 10px;
     text-align: center;
-    width: 150px;
+    width: 150px; /* Width of each movie slot */
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -75,13 +75,21 @@ h1 {
     }
 }
 
-@media (max-width: 768px) {
-    .catalog {
-        flex-direction: column; /* Stack movies vertically on smaller screens */
-        align-items: center;
-    }
-
+/* Media Queries */
+@media (min-width: 1024px) {
     .movie {
-        width: 100%; /* Make each movie container take full width */
+        width: 150px; /* 6-7 movies per row on desktop */
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .movie {
+        width: 200px; /* 4-5 movies per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .movie {
+        width: 100%; /* 1-2 movies per row on mobile */
     }
 }
