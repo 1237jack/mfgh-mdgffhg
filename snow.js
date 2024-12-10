@@ -5,7 +5,7 @@ const createSnowflake = () => {
     snowflake.style.animationDuration = `${3 + Math.random() * 5}s`; // Falling speed
     snowflake.style.opacity = `${0.3 + Math.random() * 0.7}`;
     snowflake.style.fontSize = `${10 + Math.random() * 20}px`; // Random size
-    snowflake.innerText = '🍳';
+    snowflake.innerText = '❄️';
     document.body.appendChild(snowflake);
 
     setTimeout(() => {
