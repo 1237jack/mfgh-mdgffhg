@@ -11,10 +11,21 @@ h1 {
     text-align: center;
 }
 
+.logo-container {
+    text-align: center; /* Center the logo */
+    margin-top: 20px;
+}
+
+.logo {
+    max-width: 300px; /* Adjust size to fit your layout */
+    height: auto;
+}
+
 .catalog {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 40px; /* Add some space between the logo and movie catalog */
 }
 
 .movie {
@@ -61,5 +72,16 @@ h1 {
 @keyframes fall {
     to {
         transform: translateY(100vh);
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog {
+        flex-direction: column; /* Stack movies vertically on smaller screens */
+        align-items: center;
+    }
+
+    .movie {
+        width: 100%; /* Make each movie container take full width */
     }
 }
