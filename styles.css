@@ -1,0 +1,81 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+/* Logo Section */
+.logo {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo-image {
+    width: 150px;
+    height: auto;
+    border-radius: 15px; /* Make the logo rounded */
+}
+
+/* Movie Catalog Section */
+h1 {
+    font-size: 36px;
+    color: white;
+    margin-top: 20px;
+}
+
+.catalog {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.movie {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.movie img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px; /* Rounded corners for movie images */
+}
+
+.movie p {
+    color: white;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Snowflakes Styling */
+#snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.snowflake {
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    user-select: none;
+    animation: snow 10s linear infinite;
+}
+
+@keyframes snow {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
