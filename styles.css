@@ -4,7 +4,17 @@ body {
     margin: 0;
     padding: 20px;
     color: #fff;
-    overflow: hidden;
+    overflow-y: scroll; /* Enable scrolling */
+}
+
+body::-webkit-scrollbar {
+    width: 0; /* Hides the scrollbar */
+    height: 0; /* Hides the scrollbar */
+}
+
+body {
+    scrollbar-width: none; /* Firefox: Hides the scrollbar */
+    -ms-overflow-style: none; /* IE/Edge: Hides the scrollbar */
 }
 
 h1 {
@@ -35,7 +45,7 @@ h1 {
     margin: 10px;
     padding: 10px;
     text-align: center;
-    width: 150px;
+    width: 150px; /* Width of each movie slot */
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -75,44 +85,21 @@ h1 {
     }
 }
 
-/* Custom Scrollbar Styling */
-body::-webkit-scrollbar {
-    width: 8px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: red;
-    border-radius: 8px;
-}
-
-body::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-/* Hide Scrollbar but Allow Scrolling */
-body {
-    scrollbar-width: none; /* For Firefox */
-}
-
-body::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Edge */
-}
-
 /* Media Queries */
 @media (min-width: 1024px) {
     .movie {
-        width: 150px;
+        width: 150px; /* 6-7 movies per row on desktop */
     }
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
     .movie {
-        width: 200px;
+        width: 200px; /* 4-5 movies per row on tablets */
     }
 }
 
 @media (max-width: 768px) {
     .movie {
-        width: 100%;
+        width: 100%; /* 1-2 movies per row on mobile */
     }
 }
