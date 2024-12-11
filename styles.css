@@ -4,17 +4,23 @@ body {
     margin: 0;
     padding: 20px;
     color: #fff;
-    overflow-y: scroll; /* Enable scrolling */
+    overflow-y: scroll; /* Ensure scrolling is enabled */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 0, 0, 0.5) rgba(0, 0, 0, 0); /* Default transparent red */
 }
 
+/* For WebKit browsers */
 body::-webkit-scrollbar {
-    width: 0; /* Hides the scrollbar */
-    height: 0; /* Hides the scrollbar */
+    width: 12px;
 }
 
-body {
-    scrollbar-width: none; /* Firefox: Hides the scrollbar */
-    -ms-overflow-style: none; /* IE/Edge: Hides the scrollbar */
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 0, 0, 0.5); /* Transparent red when not hovered */
+    border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 0, 0, 1); /* Solid red when hovered */
 }
 
 h1 {
